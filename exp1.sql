@@ -1,0 +1,11 @@
+create table student(id number(10) not null, name varchar(20), email varchar(20), phoneno number(10), dob date, address varchar(30), height_in_cm float(4) not null,deptno number(5) not null);
+create table department(deptno number(5) not null primary key, dname varchar(20) constraint uni_dname unique, loc varchar(20));
+alter table student add date_of_joining date;
+alter table student add stipend number(20) not null;
+alter table student add constraint check_zero check(stipend>0);
+alter table student modify id number(10) primary key;
+alter table student add constraint fkey foreign key(deptno) references department(deptno);
+alter table student drop column date_of_joining;
+alter table student drop column address;
+alter table department modify dname varchar(50);
+alter table department drop constraint uni_dname;
