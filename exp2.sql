@@ -16,3 +16,9 @@ INSERT INTO STUDENT VALUES(11,'Adam','Adam@abc.com',9874747484,'12-jan-83',164.2
 INSERT INTO STUDENT VALUES(12,'James','James@abc.com',9874747485,'03-dec-81',165.2,30,12200);
 INSERT INTO STUDENT VALUES(13,'Ford','Ford@abc.com',9874747486,'03-dec-81',166.2,20,12400);
 INSERT INTO STUDENT VALUES(14,'Miller','Miller@abc.com',9874747487,'23-jan-82',173.2,10,12600);
+UPDATE Students SET Email=NULL WHERE Deptno=10;
+UPDATE Students SET Email='JJones@abc.com',Phoneno='9876543210',DOB='01-jan-1981';
+SELECT Deptno,Name FROM Students WHERE Deptno=10;
+SELECT * FROM Students WHERE Deptno=10 OR Deptno=30;
+SELECT DISTINCT Height_in_cm FROM Students;
+SELECT Name FROM Students WHERE Name LIKE 'Sm%';
