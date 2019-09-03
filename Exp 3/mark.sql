@@ -1,27 +1,24 @@
-create table nstudent(rollno number,name varchar(30),m1 number,m2 number,m3 number,tot_marks number);
-create table grada(rollno number, name varchar(30),tot_marks number);
-create table gradb(rollno number, name varchar(30),tot_marks number);
-create table gradc(rollno number, name varchar(30),tot_marks number);
+CREATE TABLE nstudent(rollno NUMBER,name VARCHAR(30),m1 NUMBER,m2 NUMBER,m3 NUMBER,tot_marks NUMBER);
+CREATE TABLE grada(rollno NUMBER, name VARCHAR(30),tot_marks NUMBER);
+CREATE TABLE gradb(rollno NUMBER, name VARCHAR(30),tot_marks NUMBER);
+CREATE TABLE gradc(rollno NUMBER, name VARCHAR(30),tot_marks NUMBER);
 
-declare
-rollno number:=&rollno;
-name varchar(30):='&name';
-m1 number:=&m1;
-m2 number:=&m2;
-m3 number:=&m3;
-tot_marks number;
-begin
-tot_marks:=(m1+m2+m3)/3;
-insert into nstudent values(rollno,name,m1,m2,m3,tot_marks);
-IF tot_marks>75 THEN
-insert into grada values(rollno,name,tot_marks);
-ELSIF tot_marks>60 THEN
-insert into gradb values(rollno,name,tot_marks);
-ELSE
-insert into gradc values(rollno,name,tot_marks);
-END IF;
-end;
-/
-select * from grada;
-select * from gradb;
-select * from gradc;
+DELARE
+	rollno NUMBER:=&rollno;
+	name VARCHAR(30):='&name';
+	m1 NUMBER:=&m1;
+	m2 NUMBER:=&m2;
+	m3 NUMBER:=&m3;
+	tot_marks NUMBER;
+BEGIN
+	tot_marks:=(m1+m2+m3)/3;
+	INSERT INTO nstudent VALUES(rollno,name,m1,m2,m3,tot_marks);
+	IF tot_marks>75 THEN
+		INSERT INTO grada VALUES(rollno,name,tot_marks);
+	ELSIF tot_marks>60 THEN
+		INSERT INTO gradb VALUES(rollno,name,tot_marks);
+	ELSE
+		INSERT INTO gradc VALUES(rollno,name,tot_marks);
+	END IF;
+END;
+
