@@ -27,5 +27,6 @@ BEGIN
 			calc_sal := salary*0.005;
 			INSERT INTO emp_raise VALUES(empno,'03-SEP-19',calc_sal);
 	END LOOP;
+	CLOSE raise;										       
 END;                                                                                       
                                                                                        
