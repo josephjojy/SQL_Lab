@@ -11,8 +11,6 @@ INSERT INTO employee VALUES('Vaneesa',102,12500,2);
 INSERT INTO employee VALUES('Clinton',103,18400,1); 
 INSERT INTO employee VALUES('Thejus',104,16430,2);
 
--- INSERT VALUES INTO EMP_RAISE TABLE
-INSERT INTO emp_raise VALUES(100,'10-JAN-2019',5000);
-INSERT INTO emp_raise VALUES(101,'11-FEB-2019',7500); 
-INSERT INTO emp_raise VALUES(102,'12-MAR-2019',4500); 
-INSERT INTO emp_raise VALUES(103,'13-APR-2019',7400);
+-- PL/SQL PROGRAM
+                                                                                       
+                                                                                       
