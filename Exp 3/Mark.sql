@@ -1,8 +1,10 @@
+-- CREATION OF REQUIRED TABLES
 CREATE TABLE student(rollno NUMBER,name VARCHAR(30),m1 NUMBER,m2 NUMBER,m3 NUMBER,tot_marks NUMBER);
 CREATE TABLE gradeA(rollno NUMBER, name VARCHAR(30),tot_marks NUMBER);
 CREATE TABLE gradeB(rollno NUMBER, name VARCHAR(30),tot_marks NUMBER);
 CREATE TABLE gradeC(rollno NUMBER, name VARCHAR(30),tot_marks NUMBER);
 
+-- PL/SQL PROGRAM
 DECLARE
 	rollno NUMBER:=&rollno;
 	name VARCHAR(30):='&name';
